@@ -43,7 +43,11 @@ class Deck:
 
 
 
+deck1 = Deck()
+print(deck1.cards)
 
+deck2 = Deck()
+deck2.shuffle()
 
 
 
