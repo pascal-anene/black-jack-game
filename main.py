@@ -31,6 +31,7 @@ shuffle()
 cards_dealt = deal(2)
 
 card = cards_dealt[0]
+rank = card[1]
 print(card)
 
 
