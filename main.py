@@ -20,13 +20,16 @@ for suit in suits:
 def shuffle():
    random.shuffle(cards)
 
-def deal():
-   card = cards.pop() # the value card cannot be accessed outside function context
-   return card
+def deal(number):
+   cards_dealt = []
+   for x in range(number):
+      card = cards.pop() # the value card cannot be accessed outside function context
+      cards_dealt.append(card)
+   return cards_dealt
 
 shuffle()
-card = deal()
-print(card)
+cards_dealt = deal(2)
+print(cards_dealt)
 
 
 
