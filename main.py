@@ -20,7 +20,9 @@ for suit in suits:
 def shuffle():
    random.shuffle(cards)
 
-card = cards.pop()
+def deal():
+   card = cards.pop() # the value card cannot be accessed outside function context
+   return card
 
 shuffle()
 print(cards)
