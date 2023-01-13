@@ -32,7 +32,8 @@ class Deck:
             self.cards.append([suit, rank])
 
    def shuffle(self):
-      random.shuffle(self.cards)
+      if len(self.cards > 1):
+         random.shuffle(self.cards)
 
    def deal(self, number):
       cards_dealt = []
