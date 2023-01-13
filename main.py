@@ -8,7 +8,7 @@ import random
 
 class Deck:
    def __init__(self) -> None:
-      cards = []
+      self.cards = []
 
       suits = ["spades", "clubs", "hearts", "diamonds"]
 
@@ -29,15 +29,15 @@ class Deck:
 
       for suit in suits:
          for rank in ranks:
-            cards.append([suit, rank])
+            self.cards.append([suit, rank])
 
    def shuffle(self):
-      random.shuffle(cards)
+      random.shuffle(self.cards)
 
    def deal(self, number):
       cards_dealt = []
       for x in range(number):
-         card = cards.pop() # the value card cannot be accessed outside function context
+         card = self.cards.pop() # the value card cannot be accessed outside function context
          cards_dealt.append(card)
       return cards_dealt 
 
