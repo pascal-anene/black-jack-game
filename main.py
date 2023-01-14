@@ -98,12 +98,25 @@ class Hand:
       print() # this will print a blank line 
         
 
+class Game:
+    def play(self):
+      games_number = 0
+      games_to_play = 0
 
-deck = Deck()
-deck.shuffle()
+      while games_to_play <= 0:
+        try:
+          games_to_play = int(input("How many games do you want to play? "))
+        except:
+          print("You must provide a number")
 
-hand = Hand()
-hand.add_card(deck.deal(2))
-hand.display()
+      while games_number < games_to_play:
+        games_number += 1
+
+        deck = Deck()
+        deck.shuffle()
+
+        player_hand = Hand()
+        dealer_hand = Hand()
+
 
 
