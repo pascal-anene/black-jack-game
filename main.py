@@ -70,7 +70,7 @@ class Hand:
       for card in self.cards:
         card_value = int(card.rank["value"]) # type casting 
         self.value += card_value
-        if card.rank["rank"] == "A"
+        if card.rank["rank"] == "A":
           has_ace = True
 
 
@@ -91,6 +91,7 @@ class Hand:
 
       if not self.dealer: 
         print("Value:", self.get_value())
+      print() # this will print a blank line 
         
 
 
