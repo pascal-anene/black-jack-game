@@ -132,6 +132,20 @@ class Game:
         if self.check_winner(player_hand, dealer_hand):
           continue
 
+        choice = ""
+        while player_hand.get_value() < 21 and choice not in ["s", "stand"]:
+          choice = input("Please choose 'Hit' or 'Stand': ").lower()
+          print()
+          while choice not in ["h", "s", "hit", "stand"]:
+            choice = input("Please enter 'Hit' or 'Stand' (or H/S)").lower()
+            print()
+          if choice in ["h", "hit"]:
+            player_hand.add_card(deck.deal())
+            player_hand.display()
+
+
+            
+
     def check_winner(self, player_hand, dealer_hand, game_over=False):
         if not game_over:
             if player_hand.get_value() > 21:
