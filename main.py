@@ -158,6 +158,22 @@ class Game:
           dealer_hand_value = dealer_hand.get_value()
 
 
+        dealer_hand.display(show_all_dealer_cards=True)
+
+        if self.check_winner(player_hand, dealer_hand):
+          continue
+
+      
+        print("Final Results")
+        print("Your hand:", player_hand_value)
+        print("Dealer's hand:", dealer_hand_value)
+
+        self.check_winner(player_hand, dealer_hand, True)
+
+      
+      print("\n Thanks for Playing!")
+
+
 
     def check_winner(self, player_hand, dealer_hand, game_over=False):
         if not game_over:
