@@ -53,6 +53,11 @@ class Deck:
       return cards_dealt 
 
 
+class Hand:
+   def __init__(self, dealer=False):
+      self.cards = []
+      self.value = 0
+      self.dealer = dealer
 
 
 
