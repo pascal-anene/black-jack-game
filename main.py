@@ -41,7 +41,7 @@ class Deck:
             self.cards.append(Card(suit, rank))
 
    def shuffle(self):
-      if len(self.cards > 1):
+      if len(self.cards) > 1:
          random.shuffle(self.cards)
 
    def deal(self, number):
@@ -59,5 +59,15 @@ class Hand:
       self.value = 0
       self.dealer = dealer
 
+   def add_card(self, card_list):
+      self.cards.extend(card_list)
 
+
+
+deck = Deck()
+deck.shuffle()
+
+hand = Hand()
+hand.add_card(deck.deal(2))
+print(hand.cards[0], hand.cards[1])
 
