@@ -13,7 +13,7 @@ class Card:
       self.rank = rank
 
    def __str__(self) -> str:
-      return self.rank["rank"] + " of " + self.suit
+      return f"{self.rank['rank']} of {self.suit}"
 
 class Deck:
    def __init__(self) -> None:
@@ -53,12 +53,6 @@ class Deck:
       return cards_dealt 
 
 
-
-deck1 = Deck()
-print(deck1.cards)
-
-deck2 = Deck()
-deck2.shuffle()
 
 
 
