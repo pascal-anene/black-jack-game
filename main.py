@@ -116,7 +116,18 @@ class Game:
         deck.shuffle()
 
         player_hand = Hand()
-        dealer_hand = Hand()
+        dealer_hand = Hand(dealer=True)
+
+        for i in range(2):
+         player_hand.add_card(deck.deal(1))
+         dealer_hand.add_card(deck.deal(1))
+
+        print()
+        print("*" * 30)
+        print(f"Game {games_number} of {games_to_play}")
+        print("*" * 30)
+        player_hand.display()
+        dealer_hand.display()
 
 
 
