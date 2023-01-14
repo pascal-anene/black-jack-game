@@ -12,6 +12,9 @@ class Card:
       self.suit = suit
       self.rank = rank
 
+   def __str__(self) -> str:
+      return self.rank["rank"] + " of " + self.suit
+
 class Deck:
    def __init__(self) -> None:
       self.cards = []
